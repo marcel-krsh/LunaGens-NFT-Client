@@ -34,6 +34,6 @@ export const injected = new InjectedConnector({
 
 export const walletlink = new WalletLinkConnector({
   url: 'https://rpc.ftm.tools',
-  appName: 'Artion',
+  appName: 'LunaGens NFT',
   appLogoUrl: ARTION_LOGO_URL,
 });
