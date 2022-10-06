@@ -5,12 +5,10 @@ const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
 
 export const useApi = () => {
   const explorerUrl = isMainnet
-    ? 'https://ftmscan.com'
-    : 'https://testnet.ftmscan.com';
+    ? 'https://bscscan.com'
+    : 'https://testnet.bscscan.com';
 
-  const apiUrl = isMainnet
-    ? 'https://api.artion.io'
-    : 'https://api.testnet.artion.io';
+  const apiUrl = isMainnet ? 'http://localhost:5001' : 'http://localhost:5001';
 
   // eslint-disable-next-line no-undef
   // const apiUrl = process.env.REACT_APP_API_URI;

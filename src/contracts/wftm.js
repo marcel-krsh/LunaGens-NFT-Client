@@ -5,18 +5,18 @@ import { calculateGasMargin, getHigherGWEI } from 'utils';
 import useContract from 'hooks/useContract';
 import { ethers } from 'ethers';
 
-const WFTM_ADDRESS = {
-  [ChainId.FANTOM]: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
-  [ChainId.FANTOM_TESTNET]: '0xf1277d1Ed8AD466beddF92ef448A132661956621',
+const WBSC_ADDRESS = {
+  [ChainId.BSC]: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+  [ChainId.BSC_TESTNET]: '0x5b3e2bc1da86ff6235d9ead4504d598cae77dbcb',
 };
 
 // eslint-disable-next-line no-undef
 const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
-const CHAIN = isMainnet ? ChainId.FANTOM : ChainId.FANTOM_TESTNET;
+const CHAIN = isMainnet ? ChainId.BSC : ChainId.BSC_TESTNET;
 export const useWFTMContract = () => {
   const { getContract } = useContract();
 
-  const wftmAddress = WFTM_ADDRESS[CHAIN];
+  const wftmAddress = WBSC_ADDRESS[CHAIN];
 
   const getWFTMContract = async () => await getContract(wftmAddress, WFTM_ABI);
 
