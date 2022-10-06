@@ -11,29 +11,29 @@ const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
 
 const RPC = isMainnet
   ? {
-      [ChainId.FANTOM]: 'https://rpc.ftm.tools',
+      [ChainId.BSC]: 'https://bsc-dataseed.binance.org',
     }
   : {
-      [ChainId.FANTOM_TESTNET]: 'https://rpc.testnet.fantom.network',
+      [ChainId.BSC_TESTNET]: 'https://data-seed-prebsc-1-s1.binance.org:8545',
     };
 
 export const network = new NetworkConnector({
-  defaultChainId: ChainId.FANTOM,
+  defaultChainId: ChainId.BSC,
   urls: RPC,
 });
 
 export const injected = new InjectedConnector({
   supportedChainIds: isMainnet
     ? [
-        250, // fantom
+        56, // fantom
       ]
     : [
-        4002, // fantom testnet
+        97, // fantom testnet
       ],
 });
 
 export const walletlink = new WalletLinkConnector({
-  url: 'https://rpc.ftm.tools',
+  url: 'https://bsc-dataseed.binance.org',
   appName: 'LunaGens NFT',
   appLogoUrl: ARTION_LOGO_URL,
 });

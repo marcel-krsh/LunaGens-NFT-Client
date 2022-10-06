@@ -11,7 +11,7 @@ import iconDAI from 'assets/imgs/dai.png';
 const isMainnet = process.env.REACT_APP_ENV === 'MAINNET';
 
 const Tokens = {
-  [ChainId.FANTOM]: [
+  [ChainId.BSC]: [
     // {
     //   address: '',
     //   name: 'Fantom',
@@ -20,35 +20,35 @@ const Tokens = {
     //   icon: iconFTM,
     // },
     {
-      address: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
+      address: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
       name: 'Wrapped BNB',
-      symbol: 'BNB',
+      symbol: 'WBNB',
       decimals: 18,
       icon: iconWbnb,
     },
     {
-      address: '0x049d68029688eabf473097a2fc38ef61633a3c7a',
+      address: '0x55d398326f99059fF775485246999027B3197955',
       name: 'Tether USD',
       symbol: 'fUSDT',
       decimals: 6,
       icon: iconUSDT,
     },
     {
-      address: '0x04068DA6C83AFCFA0e13ba15A6696662335D5B75',
+      address: '0x8AC76a51cc950d9822D68b83fE1Ad97B32Cd580d',
       name: 'USD Coin',
       symbol: 'USDC',
       decimals: 6,
       icon: iconUSDC,
     },
     {
-      address: '0x8D11eC38a3EB5E956B052f67Da8Bdc9bef8Abf3E',
+      address: '0x1AF3F329e8BE154074D8769D1FFa4eE058B1DBc3',
       name: 'Dai Stablecoin',
       symbol: 'DAI',
       decimals: 18,
       icon: iconDAI,
     },
   ],
-  [ChainId.FANTOM_TESTNET]: [
+  [ChainId.BSC_TESTNET]: [
     // {
     //   address: '',
     //   name: 'Fantom',
@@ -57,7 +57,7 @@ const Tokens = {
     //   icon: iconFTM,
     // },
     {
-      address: '0xf1277d1ed8ad466beddf92ef448a132661956621',
+      address: '0x5b3e2bc1da86ff6235d9ead4504d598cae77dbcb',
       name: 'Wrapped BNB',
       symbol: 'WBNB',
       decimals: 18,
