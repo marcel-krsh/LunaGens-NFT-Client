@@ -228,7 +228,7 @@ const PaintBoard = () => {
     if (balance < fee) {
       showToast(
         'custom',
-        `Your balance should be at least ${fee} FTM to mint an NFT`
+        `Your balance should be at least ${fee} BNB to mint an NFT`
       );
       return;
     }
@@ -604,7 +604,7 @@ const PaintBoard = () => {
             {fee !== null ? (
               <>
                 <InfoIcon />
-                &nbsp;{fee} FTM are charged to create a new NFT.
+                &nbsp;{fee} BNB are charged to create a new NFT.
               </>
             ) : (
               <Skeleton width={330} height={22} />

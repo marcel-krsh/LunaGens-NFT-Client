@@ -1,7 +1,8 @@
 import { ChainId } from '@sushiswap/sdk';
 
 // import iconFTM from 'assets/imgs/ftm.png';
-import iconWFTM from 'assets/imgs/wftm.png';
+//import iconWFTM from 'assets/imgs/wftm.png';
+import iconWbnb from 'assets/svgs/BNB.svg';
 import iconUSDT from 'assets/imgs/usdt.png';
 import iconUSDC from 'assets/imgs/usdc.png';
 import iconDAI from 'assets/imgs/dai.png';
@@ -20,10 +21,10 @@ const Tokens = {
     // },
     {
       address: '0x21be370d5312f44cb42ce377bc9b8a0cef1a4c83',
-      name: 'Wrapped Fantom',
-      symbol: 'WFTM',
+      name: 'Wrapped BNB',
+      symbol: 'BNB',
       decimals: 18,
-      icon: iconWFTM,
+      icon: iconWbnb,
     },
     {
       address: '0x049d68029688eabf473097a2fc38ef61633a3c7a',
@@ -57,10 +58,10 @@ const Tokens = {
     // },
     {
       address: '0xf1277d1ed8ad466beddf92ef448a132661956621',
-      name: 'Wrapped Fantom',
-      symbol: 'WFTM',
+      name: 'Wrapped BNB',
+      symbol: 'WBNB',
       decimals: 18,
-      icon: iconWFTM,
+      icon: iconWbnb,
     },
   ],
 };

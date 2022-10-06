@@ -31,7 +31,7 @@ const cards = [
     icon: card2,
     title: 'Super Fast',
     description:
-      'Since LunaGens runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
+      'Since LunaGens runs on the BSC Network, transactions are usually confirmed within 1-2 seconds.',
     path: '/',
   },
   {
@@ -105,8 +105,8 @@ const LandingPage = () => {
               style={{ color: '#FFF' }}
             >{`Trade without platform fees on LunaGens`}</div>
             <div className={styles.subtitle}>
-              LunaGens is an NFT marketplace built on Fantom. Create and trade
-              NFTs instantly with low network costs.
+              LunaGens is an NFT marketplace built on BSC Network Create and
+              trade NFTs instantly with low network costs.
             </div>
             <div className={styles.subtitle}>
               <strong>
