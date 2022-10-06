@@ -276,7 +276,7 @@ const CollectionCreate = ({ isRegister }) => {
 
           try {
             const signer = await getSigner();
-            const msg = `Approve Signature on Artion.io with nonce ${nonce}`;
+            const msg = `Approve Signature on lunagens.com with nonce ${nonce}`;
 
             signature = await signer.signMessage(msg);
             signatureAddress = ethers.utils.verifyMessage(msg, signature);
@@ -393,7 +393,7 @@ const CollectionCreate = ({ isRegister }) => {
                 try {
                   const signer = await getSigner();
                   signature = await signer.signMessage(
-                    `Approve Signature on Artion.io with nonce ${nonce}`
+                    `Approve Signature on lunagens.com with nonce ${nonce}`
                   );
                 } catch (err) {
                   toast(
@@ -647,7 +647,7 @@ const CollectionCreate = ({ isRegister }) => {
             <div className={styles.inputTitle}>
               Royalty *&nbsp;
               <BootstrapTooltip
-                title="Each NFT under this collection exchanged through Artion will have a percentage of sale given to nominated wallet address."
+                title="Each NFT under this collection exchanged through Lunagens will have a percentage of sale given to nominated wallet address."
                 placement="top"
               >
                 <HelpOutlineIcon />

@@ -34,6 +34,6 @@ export const injected = new InjectedConnector({
 
 export const walletlink = new WalletLinkConnector({
   url: 'https://bsc-dataseed.binance.org',
-  appName: 'LunaGens',
+  appName: 'LunaGens NFT',
   appLogoUrl: ARTION_LOGO_URL,
 });
