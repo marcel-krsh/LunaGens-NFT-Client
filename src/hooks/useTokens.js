@@ -67,7 +67,7 @@ const Tokens = {
 };
 
 export default function useTokens() {
-  const chain = isMainnet ? ChainId.FANTOM : ChainId.FANTOM_TESTNET;
+  const chain = isMainnet ? ChainId.BSC : ChainId.BSC_TESTNET;
 
   const tokens = Tokens[chain];
 

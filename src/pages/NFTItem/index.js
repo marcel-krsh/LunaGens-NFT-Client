@@ -107,7 +107,7 @@ const filters = ['Trade History', 'Transfer History'];
 
 // eslint-disable-next-line no-undef
 const ENV = process.env.REACT_APP_ENV;
-const CHAIN = ENV === 'MAINNET' ? ChainId.FANTOM : ChainId.FANTOM_TESTNET;
+const CHAIN = ENV === 'MAINNET' ? ChainId.BSC : ChainId.BSC_TESTNET;
 
 const NFTItem = () => {
   const dispatch = useDispatch();
@@ -293,8 +293,8 @@ const NFTItem = () => {
     return (
       account &&
       (ENV === 'MAINNET'
-        ? chainId === ChainId.FANTOM
-        : chainId === ChainId.FANTOM_TESTNET)
+        ? chainId === ChainId.BSC
+        : chainId === ChainId.BSC_TESTNET)
     );
   };
 
@@ -2827,7 +2827,7 @@ const NFTItem = () => {
         </div>
         <div className={styles.panelLine}>
           <div className={styles.panelLabel}>Chain ID</div>
-          <div className={styles.panelValue}>250</div>
+          <div className={styles.panelValue}>56</div>
         </div>
       </div>
     </Panel>

@@ -8,7 +8,7 @@ export const useApi = () => {
     ? 'https://bscscan.com'
     : 'https://testnet.bscscan.com';
 
-  const apiUrl = isMainnet ? 'https://api-marketplace.lunagens.com' : 'http://localhost:5001';
+  const apiUrl = isMainnet ? 'http://localhost:5001' : 'http://localhost:5001';
 
   // eslint-disable-next-line no-undef
   // const apiUrl = process.env.REACT_APP_API_URI;
