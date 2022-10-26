@@ -219,8 +219,8 @@ const PaintBoard = () => {
       showToast('info', 'Connect your wallet first');
       return;
     }
-    if (chainId !== ChainId.FANTOM && chainId !== ChainId.FANTOM_TESTNET) {
-      showToast('info', 'You are not connected to Fantom Opera Network');
+    if (chainId !== ChainId.BSC && chainId !== ChainId.BSC_TESTNET) {
+      showToast('info', 'You are not connected to BSC Network');
       return;
     }
     const balance = await WalletUtils.checkBalance(account);
@@ -228,7 +228,7 @@ const PaintBoard = () => {
     if (balance < fee) {
       showToast(
         'custom',
-        `Your balance should be at least ${fee} FTM to mint an NFT`
+        `Your balance should be at least ${fee} BNB to mint an NFT`
       );
       return;
     }
@@ -256,7 +256,7 @@ const PaintBoard = () => {
       const { data: nonce } = await getNonce(account, authToken);
       try {
         const signer = await getSigner();
-        const msg = `Approve Signature on Artion.io with nonce ${nonce}`;
+        const msg = `Approve Signature on lunagens.com with nonce ${nonce}`;
         signature = await signer.signMessage(msg);
         addr = ethers.utils.verifyMessage(msg, signature);
       } catch (err) {
@@ -604,7 +604,7 @@ const PaintBoard = () => {
             {fee !== null ? (
               <>
                 <InfoIcon />
-                &nbsp;{fee} FTM are charged to create a new NFT.
+                &nbsp;{fee} BNB are charged to create a new NFT.
               </>
             ) : (
               <Skeleton width={330} height={22} />

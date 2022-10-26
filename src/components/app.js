@@ -34,7 +34,7 @@ const App = () => {
 
   const getPrice = async () => {
     try {
-      if (chainId === ChainId.FANTOM) {
+      if (chainId === ChainId.BSC) {
         // const endpoint = 'https://rpc.bandchain.org';
         // const client = new Client(endpoint);
         // const resp = await client.getReferenceData(['FTM/USD', 'BTC/USD']);
@@ -42,7 +42,7 @@ const App = () => {
         // dispatch(PriceActions.updatePrice(resp.rate));
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const oracle = new ethers.Contract(
-          '0xf4766552D15AE4d256Ad41B6cf2933482B0680dc',
+          '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
           [
             {
               inputs: [],
@@ -57,7 +57,7 @@ const App = () => {
         const _price = await oracle.latestAnswer();
         const price = parseFloat(_price.toString()) / 10 ** 8;
         dispatch(PriceActions.updatePrice(price));
-      } else if (chainId === ChainId.FANTOM_TESTNET) {
+      } else if (chainId === ChainId.BSC_TESTNET) {
         const provider = new ethers.providers.Web3Provider(window.ethereum);
         const oracle = new ethers.Contract(
           '0xe04676B9A9A2973BCb0D1478b5E1E9098BBB7f3D',
@@ -100,10 +100,10 @@ const App = () => {
           <ProtectedRoute exact path="/create" component={PaintBoard} />
           {/* <Route path="/bundle/:bundleID" component={NFTItem} /> */}
           <Route path="/account/:uid" component={AccountDetails} />
-          {/* <ProtectedRoute
+          <ProtectedRoute
             path="/collection/create"
             component={() => <CollectionCreate isRegister={false} />}
-          /> */}
+          />
           <ProtectedRoute
             path="/collection/register"
             component={() => <CollectionCreate isRegister />}

@@ -10,8 +10,6 @@ import { Categories } from 'constants/filter.constants';
 import HeaderActions from 'actions/header.actions';
 import FilterActions from 'actions/filter.actions';
 import Header from 'components/header';
-
-import logo from 'assets/svgs/logo_white.svg';
 import fantomLogo from 'assets/svgs/fantom_logo_white.svg';
 import card1 from 'assets/svgs/card1.svg';
 import card2 from 'assets/svgs/card2.svg';
@@ -33,7 +31,7 @@ const cards = [
     icon: card2,
     title: 'Super Fast',
     description:
-      'Since Artion runs on the Fantom Opera Network, transactions are usually confirmed within 1-2 seconds.',
+      'Since LunaGens runs on the BSC Network, transactions are usually confirmed within 1-2 seconds.',
     path: '/',
   },
   {
@@ -47,7 +45,7 @@ const cards = [
     icon: card4,
     title: 'Zero Platform Fees',
     description:
-      'Trade NFTs via auction or direct offer without any fees taken by Artion.',
+      'Trade NFTs via auction or direct offer without any fees taken by LunaGens.',
     path: '/explore',
   },
 ];
@@ -105,10 +103,10 @@ const LandingPage = () => {
             <div
               className={styles.title}
               style={{ color: '#FFF' }}
-            >{`Trade without platform fees on Artion`}</div>
+            >{`Trade without platform fees on LunaGens`}</div>
             <div className={styles.subtitle}>
-              Artion is an NFT marketplace built on Fantom. Create and trade
-              NFTs instantly with low network costs.
+              LunaGens is an NFT marketplace built on BSC Network Create and
+              trade NFTs instantly with low network costs.
             </div>
             <div className={styles.subtitle}>
               <strong>
@@ -153,7 +151,7 @@ const LandingPage = () => {
       </div>
       <div className={styles.about}>
         <div className={styles.aboutInner}>
-          <div className={styles.aboutTitle}>Why Artion</div>
+          <div className={styles.aboutTitle}>Why LunaGens NFT</div>
           <div className={styles.aboutCards}>
             {cards.map((card, key) =>
               renderAboutCard(
@@ -175,7 +173,11 @@ const LandingPage = () => {
         </div>
       </div>
       <div className={styles.footer}>
-        <img src={logo} alt="logo" className={styles.logo} />
+        <img
+          src="https://static.wixstatic.com/media/0d6aa4_8a1b78acebb34c74854a62ca4b834679~mv2.webp"
+          alt="logo"
+          className={styles.logo}
+        />
         <a
           style={{ textDecoration: 'none', color: '#FFFFFF' }}
           target="_blank"
